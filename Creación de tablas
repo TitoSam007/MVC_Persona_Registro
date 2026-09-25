@@ -1,0 +1,24 @@
+
+tabla persona
+
+CREATE TABLE `persona` (
+  `id_persona` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(40) NOT NULL,
+  `cognoms` varchar(60) NOT NULL,
+  `email` varchar(80) NOT NULL,
+  `edat` int(11) NOT NULL,
+  PRIMARY KEY (`id_persona`)
+);
+
+tabla registre
+
+create table registre(
+	id_registre int primary key auto_increment,
+    id_persona int not null unique,
+    user varchar(50) not null,
+    password varchar(100) not null,
+    
+    constraint fk_registre_persona
+		foreign key(id_persona) 
+        references persona(id_persona)
+);
