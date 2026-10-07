@@ -1,6 +1,6 @@
-package datos;
+package dao;
 
-import dominio.Registre;
+import model.Registre;
 import java.sql.*;
 import java.util.*;
 public class RegistreDAO {

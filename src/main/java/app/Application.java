@@ -1,15 +1,25 @@
-import datos.PersonaDAO;
-import datos.RegistreDAO;
-import dominio.Persona;
-import dominio.Registre;
+package app;
+
+import controller.PersonaController;
+import dao.PersonaDAO;
+import dao.RegistreDAO;
+import model.Persona;
+import model.Registre;
+import service.PersonaService;
+import view.ConsolaView;
 
 import java.sql.*;
-import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class Application {
 
     public static void main(String[] args) {
+
+
+        var view = new ConsolaView();
+        var service = new PersonaService();
+        var controller = new PersonaController(view,service);
+        controller.run();
 
         PersonaDAO personaDAO = new PersonaDAO();
 

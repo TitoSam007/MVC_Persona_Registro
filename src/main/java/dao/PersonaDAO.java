@@ -1,7 +1,6 @@
-package datos;
+package dao;
 
-import datos.Conexion;
-import dominio.Persona;
+import model.Persona;
 import java.util.*;
 import java.sql.*;
 
